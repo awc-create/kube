@@ -1,3 +1,7 @@
-FROM alpine
+FROM node:18-alpine
 
-CMD ["echo", "Hello World"]
+WORKDIR /app
+
+RUN npm --version
+
+CMD ["node", "-e", "console.log('Hello from Docker!')"]
